@@ -21,6 +21,7 @@ public class CommandCreateTeam implements CommandExecutor {
 
         for (Team t : Main.teams) {
             if (teamName.equals(t.getTeamName())) {
+                Broadcasting.sendError(player, "A team with that name already exists");
                 return true;
             }
         }
