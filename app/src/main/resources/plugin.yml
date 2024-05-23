@@ -5,3 +5,7 @@ description: Simple team plugin for Java MC
 author: pairnon
 website: https://github.com/pairnon/TeamPlugin
 api-version: '1.20'
+commands:
+  createteam:
+    description: Create a team with a specified name
+    usage: createteam
