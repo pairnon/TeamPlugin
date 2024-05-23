@@ -7,8 +7,6 @@ import org.bukkit.entity.Player;
 
 import io.papermc.teamplugin.Main;
 import io.papermc.teamplugin.classes.Team;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.NamedTextColor;
 
 public class CommandListTeams implements CommandExecutor {
     
@@ -24,7 +22,7 @@ public class CommandListTeams implements CommandExecutor {
             teamList += "; ";
         }
 
-        player.sendMessage(Component.text(teamList, NamedTextColor.GOLD));
+        Broadcasting.sendMessage(player, teamList);
 
 
         

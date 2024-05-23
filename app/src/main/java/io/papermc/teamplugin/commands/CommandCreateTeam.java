@@ -7,8 +7,6 @@ import org.bukkit.entity.Player;
 
 import io.papermc.teamplugin.Main;
 import io.papermc.teamplugin.classes.Team;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.NamedTextColor;
 
 public class CommandCreateTeam implements CommandExecutor {
     
@@ -21,9 +19,16 @@ public class CommandCreateTeam implements CommandExecutor {
 
         String teamName = args[0];
 
+        for (Team t : Main.teams) {
+            if (teamName.equals(t.getTeamName())) {
+                return true;
+            }
+        }
+
+
         Main.teams.add(new Team(teamName));
 
-        player.sendMessage(Component.text("Created team with name " + teamName, NamedTextColor.GREEN));
+        Broadcasting.sendSuccess(player, "Created team with name " + teamName);
 
 
         return true;

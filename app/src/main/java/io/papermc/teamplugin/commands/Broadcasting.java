@@ -8,15 +8,15 @@ import net.kyori.adventure.text.format.NamedTextColor;
 public class Broadcasting {
 
     public static void sendMessage(Player player, String message) {
-        player.sendMessage(Component.text("[TeamPlugin]" + message, NamedTextColor.GOLD));
+        player.sendMessage(Component.text("[TEAMS] " + message, NamedTextColor.GOLD));
     }
     
     public static void sendSuccess(Player player, String message) {
-        player.sendMessage(Component.text("[TeamPlugin]" + message, NamedTextColor.GREEN));
+        player.sendMessage(Component.text("[TEAMS] " + message, NamedTextColor.GREEN));
     }
 
     public static void sendError(Player player, String message) {
-        player.sendMessage(Component.text("[TeamPlugin]" + message, NamedTextColor.RED));
+        player.sendMessage(Component.text("[TEAMS] " + message, NamedTextColor.RED));
     }
 
 }
