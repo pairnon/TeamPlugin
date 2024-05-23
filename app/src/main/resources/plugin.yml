@@ -1,0 +1,7 @@
+name: TeamPlugin
+version: 1.0.0
+main: io.papermc.teamplugin.Main
+description: Simple team plugin for Java MC
+author: pairnon
+website: https://github.com/pairnon/TeamPlugin
+api-version: '1.20'
