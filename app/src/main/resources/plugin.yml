@@ -9,3 +9,6 @@ commands:
   createteam:
     description: Create a team with a specified name
     usage: createteam <name>
+  listteams:
+    description: Get a list of all teams
+    usage: listteams
