@@ -15,7 +15,10 @@ public class CommandJoinTeam implements CommandExecutor {
         
         Player player = (Player) sender;
 
-        if (args.length == 0) { return false; }
+        if (args.length == 0) {
+            Broadcasting.sendError(player, "You must specify a team name");
+            return true;
+        }
 
         String teamName = args[0];
 
