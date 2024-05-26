@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import io.papermc.teamplugin.classes.Team;
 import io.papermc.teamplugin.commands.CommandCreateTeam;
+import io.papermc.teamplugin.commands.CommandJoinTeam;
 import io.papermc.teamplugin.commands.CommandListTeams;
 
 public class Main extends JavaPlugin implements Listener {
@@ -20,6 +21,7 @@ public class Main extends JavaPlugin implements Listener {
 
         this.getCommand("createteam").setExecutor(new CommandCreateTeam());
         this.getCommand("listteams").setExecutor(new CommandListTeams());
+        this.getCommand("jointeam").setExecutor(new CommandJoinTeam());
 
         teams = new ArrayList<Team>();
     }

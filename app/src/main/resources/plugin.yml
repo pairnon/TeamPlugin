@@ -12,3 +12,6 @@ commands:
   listteams:
     description: Get a list of all teams
     usage: listteams
+  jointeam:
+    description: Join a team
+    usage: jointeam <name>
