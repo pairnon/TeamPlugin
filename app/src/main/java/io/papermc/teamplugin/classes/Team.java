@@ -19,6 +19,10 @@ public class Team {
         teamPlayers.add(player.getDisplayName());
     }
 
+    public boolean hasPlayer(Player player) {
+        return (teamPlayers.contains(player.getDisplayName()));
+    }
+
     public String getTeamName() {
         return teamName;
     }

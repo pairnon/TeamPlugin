@@ -24,6 +24,10 @@ public class CommandJoinTeam implements CommandExecutor {
 
         for (Team t : Main.teams) {
             if (teamName.equals(t.getTeamName())) {
+                if (t.hasPlayer(player)) {
+                    Broadcasting.sendError(player, "You are already in that team");
+                    return true;
+                }
             t.addPlayer(player);
             Broadcasting.sendSuccess(player, "Successfully joined " + t.getTeamName());
             return true;
