@@ -15,3 +15,6 @@ commands:
   jointeam:
     description: Join a team
     usage: jointeam <name>
+  leaveteam:
+    description: Leave your team
+    usage: leaveteam
