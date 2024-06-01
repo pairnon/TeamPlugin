@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.bukkit.entity.Player;
 
+import io.papermc.teamplugin.Main;
+
 @SuppressWarnings("deprecation")
 public class Team {
     
@@ -16,7 +18,9 @@ public class Team {
     }
 
     public void addPlayer(Player player) {
-        teamPlayers.add(player.getDisplayName());
+        String playerName = player.getDisplayName();
+        Main.teamMembers.add(new TeamMember(playerName, teamName));
+        teamPlayers.add(playerName);
     }
 
     public boolean hasPlayer(Player player) {
