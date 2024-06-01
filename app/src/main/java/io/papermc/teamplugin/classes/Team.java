@@ -23,6 +23,14 @@ public class Team {
         teamPlayers.add(playerName);
     }
 
+    public String removePlayer(Player player) {
+        String playerName = player.getDisplayName();
+        if (teamPlayers.remove(playerName)) {
+            return playerName;
+        }
+        return null;
+    }
+
     public boolean hasPlayer(Player player) {
         return (teamPlayers.contains(player.getDisplayName()));
     }
